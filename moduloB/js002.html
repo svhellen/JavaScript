@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira aula pratica JavaScript</title>
+</head>
+<body>
+   <h1>Olá, mundo!</h1> 
+   <p>Já me livrei da maldição</p>
+   <h2>Adição / Concatenação</h2>
+    <p>
+       (number + number) para adição
+       (string + string) para concatenação
+    </p>
+
+   <h2>Conversão de números</h2>
+   <p>
+      Number.parseInt(n) de string para inteiro
+      Number.parseFloat(n) de string para float
+      Number(n) o JS decide o tipo de número
+      String(n) número para string
+      n.toString() outra forma de número para string
+      variavel.toFixed(numeros das casas decimais) formata as casas decimais dos numeros
+      variavel.toFixed(2).replace('.', ',') formata as casas decimais e troca o ponto por virgula
+      variavel.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) formata o numero pro padrao de moeda brasileira nesse caso
+      variavel.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}) formata pra dolar
+   </p>
+
+   <h2>Formatação de strings</h2>
+   <p>
+      var s = 'JavaScript'
+      'Eu estou aprendendo ' + s >>> usa concatenaçao
+      `Eu estou aprendendo ${s}` >>> usa template string
+      s.length diz quantos caracteres tem na string
+      s.toUpperCase() tudo para 'MAIÚSCULAS'
+      s.LowerCase() tudo para 'minúsculas'
+   </p>
+   <script>
+      // (number + number) para adição
+      // (string + string) para concatenação
+
+      //Conversão de números
+      //Number.parseInt(n) de string para inteiro
+      //Number.parseFloat(n) de string para float
+      //Number(n) o JS decide o tipo de número
+      //String(n) número para string
+      //n.toString() outra forma de número para string
+      //variavel.toFixed(numeros das casas decimais) formata as casas decimais dos numeros
+      //variavel.toFixed(2).replace('.', ',') formata as casas decimais e troca o ponto por virgula
+      //variavel.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) formata o numero pro padrao de moeda brasileira nesse caso
+      //variavel.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}) formata pra dolar
+
+      //Formatação de strings
+      //var s = 'JavaScript'
+      //'Eu estou aprendendo ' + s >>> usa concatenaçao
+      //`Eu estou aprendendo ${s}` >>> usa template string
+      //s.length diz quantos caracteres tem na string
+      //s.toUpperCase() tudo para 'MAIÚSCULAS'
+      //s.LowerCase() tudo para 'minúsculas'
+
+      var n1 = Number(window.prompt('Digite um número: '))
+      var n2 = Number(window.prompt('Digite outro número: '))
+      soma = n1 + n2
+      //window.alert('A soma entre '+ n1 + ' e ' + n2 + ' é ' + String(soma) + '.')
+      window.alert(`A soma entre ${n1} e ${n2} é ${soma}.`)
+
+      var nome = window.prompt('Qual é o seu nome?')
+      document.writeln(`Olá, <strong>${nome}</strong>. Seu nome tem ${nome.length} letras.`)//escreva na tela
+      document.writeln(`Seu nome em maiúsculas: ${nome.toUpperCase()}`)
+   </script>
+</body>
+</html>

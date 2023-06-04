@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros comandos com DOM</title>
+    <style>
+        body {
+            background: white;
+        }
+        div#area {
+            background: yellow;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <abbr title="Document Object Model"><strong>DOM</strong></abbr> em JavaScript.</p>
+   
+    <h2>Arvore DOM </h2>
+    <p>Comeca da raiz dentro do navegadpr (na janela por exemplo) essa janela é um objeto DOM</p>
+    <h2>Selecionando</h2>
+    <p>Por marca - getElementsByTagName()<br>
+       Por ID - getElementByID<br>
+       Por Nome - getElementByName()<br>
+       Por Classe - getElementsByClassName<br>
+       Por Seletor - querySelector() ou querySelectorAll()<br>
+     </p>   
+    <h2>Eventos DOM</h2>
+    <div id="area">Clique em mim</div>
+    <p>
+    mouseenter <br>
+    mousemove <br>
+    mousedown <br>
+    mouseup <br>
+    click <br>
+    mouseout <br>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">Ver mais eventos</a> <br>
+    </p>
+   <h2>Funções</h2>
+   <p>
+    function {<br>
+        ação<br>
+    }
+   </p>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write(p1.innerText)
+        var p2 = window.document.getElementsByTagName('p')[1]
+        window.document.write(p2.innerHTML)
+        corpo.style.background = 'pink'
+        p2.style.color = 'blue'
+        //var d = window.document.getElementById('msg')
+        var d = window.document.querySelector('div#area')
+        d.style.color = 'red'
+
+        var clicado = 1
+
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'Clicou ' + clicado + 'x!'
+            a.style.color = 'white'
+            a.style.background = 'red'
+            clicado = clicado + 1
+        }
+
+        function entrar() {
+            a.innerHTML = 'Entrou!'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.color = 'red'
+            a.style.background = 'yellow'
+            clicado = 1
+        }
+    </script>
+</body>
+</html>

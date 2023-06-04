@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    <style>
+     
+    </style>
+</head>
+<body>
+    <h1>Condições</h1>
+    <p> </p>
+<pre>
+    if (condição) {
+        true
+    }else{
+        false
+    }
+</pre>
+   
+    <h2>Tipos de condições</h2>
+    <h3>Condição simples    </h3>
+    <p></p>
+<pre>
+<code>
+    if (condição) {
+        true
+    }
+</code>
+</pre>
+    <h3>Condição composta </h3>
+    <p></p>
+<pre>
+<code>
+    if (condição) {
+        true
+    }else{
+        false
+    }
+</code>
+</pre>
+    <h3>Condição aninhada</h3>
+    <p></p>
+    <img src="imagens/condicao_aninhada.png" alt="">
+    <img src="imagens/condicao_aninhada2.png" alt="">
+<pre>
+<code>
+    if (condição1) {
+        bloco1
+    }else{
+        if (condição2) {
+            bloco2
+        }else{
+            if (condição3) {
+               bloco3 
+            }else{
+                bloco4
+            }     
+        }
+    }
+</code>
+</pre> 
+    <h3>Condição Múltipla</h3> 
+    <p></p>
+    <img src="imagens/condicao_multipla.png" alt="">
+    <img src="imagens/condicao_multipla2.png" alt="">    
+    <img src="imagens/condicao_multipla3.png" alt="">
+    <pre>
+        <code>
+            var agora = new Date()
+            var diaSem = agora.getDay()
+            
+            switch (diaSem) {
+                case 0:
+                  console.log('Domingo')
+                  break  
+                case 1:
+                    console.log('Segunda')
+                    break
+                case 2:
+                    console.log('Terça')
+                    break
+                case 3:
+                    console.log('Quarta')
+                    break
+                case 4:
+                    console.log('Quinta')
+                    break
+                case 5:
+                    console.log('sexta')
+                    break
+                case 6:
+                    console.log('Sábado')
+                    break
+                default:
+                    console.log('[ERRO] Dia inválido!')
+                    break
+            }
+
+            SAÍDA:
+            Info: Start process (16:43:50)
+            Terça
+            Info: End process (16:43:51)
+        </code>
+    </pre>
+    <p>USAR BREAK SEMPRE!!!!!!!!EM CADA CASE!!! NAO ESQUECER!!!!!!!!!!</p>
+</body>
+</html>

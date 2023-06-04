@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro?</title>
+</head>
+<body>
+    <h1>Verifique se a pessoa é Brasileira ou estrangeira</h1>
+    País onde a pessoa nasceu: <input type="text" name="país" id="país" value="ex:EUA" onclick="limpaInput()" >
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id="res">
+
+    </div>
+    <script>
+        var país = window.document.querySelector('input#país');
+
+        function limpaInput() {
+            país.value = ''
+        }
+
+        function verificar() {
+            var país = window.document.querySelector('input#país')
+            var res = window.document.querySelector('div#res')
+             res.innerHTML = `<p>Resultado: </p>`
+            if (país.value != 'BR') {
+                res.innerHTML += `<p>ESTRANGEIRA</p>`
+            }else{
+                res.innerHTML += `<p>BRASILEIRA</p>`
+            }
+        }
+    </script>
+</body>
+</html>

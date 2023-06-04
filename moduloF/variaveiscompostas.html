@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis Compostas</title>
+</head>
+<body>
+    <h1>Variáveis</h1>
+    <h2>Variáveis simples:</h2>
+    <p>Só conseguem armazenar <strong>um valor</strong> por vez.</p>
+    <h2>Variáveis compostas:</h2>
+    <p>
+        Devem sem capazes de armazenar <strong>vários valores</strong> em uma mesma estrutura. <br>
+        Um array/vetor/variável composta é uma variável que tem vários elementos, cada elemento é composto por seu valor e por uma chave de identificação.
+        
+    </p>
+    <img src="array_vetor.png" alt="">
+    <img src="array_vetor1.png" alt="">
+    <pre>
+    <code>
+        let num = [5, 8, 2, 9, 3]
+        //add um valor na vaga 5
+        num[5] = 6
+        console.log(`Nosso vetor é o ${num}.`)
+        
+        //use num.push() para adicionar valor na ultima vaga mesmo sem saber qual é
+        num.push(7)
+        
+        //use num.length pra saber o comprimento do vetor
+        console.log(`O nosso vetor tem ${num.length} elementos.`)
+        
+        //use num.sort() para colocar os elementos em ordem crescente
+        console.log(`Usando o comando num.sort(): ${num.sort()}`)
+        console.log(`Nosso vetor é o ${num}.`)
+        
+        console.log('For padrão:')
+        for (let i = 0; i < num.length; i++) {
+            console.log(`Vaga ${i}: ${num[i]}`)
+        }
+        
+        //essa forma só funciona pra arrays e objectos (sao a mesma coisa pq arrays sao objetos)
+        console.log('For simplificado:')
+        for (let i in num) {
+            console.log(`Vaga ${i}: ${num[i]}`)
+        }
+        
+        //use num.indexOf() pra procurar um valor dentro do vetor, ele vai retornar a key do valor
+        console.log(`Se encontrar o valor procurado vai retornar a key, caso contrário vai retornar "-1"`)
+        console.log(`num.indexOf(7)  ===== ${num.indexOf(7)}`)
+        console.log(`num.indexOf(4)  ===== ${num.indexOf(4)}`)
+        
+        //um for pra procurar valores de 0 a 10 na array/vetor
+        for (let i = 0; i < 10; i++) {
+            let pos = num.indexOf(i)
+            if (pos == -1) {
+                console.log(`O valor ${i} não foi encontrado!`)
+            }else{
+                console.log(`O valor ${i} está na posição ${pos}`)
+            }
+        }
+
+        Saída:
+        Nosso vetor é o 5,8,2,9,3,6.
+        O nosso vetor tem 7 elementos.
+        Usando o comando num.sort(): 2,3,5,6,7,8,9
+        Nosso vetor é o 2,3,5,6,7,8,9.
+        For padrão:
+        Vaga 0: 2
+        Vaga 1: 3
+        Vaga 2: 5
+        Vaga 3: 6
+        Vaga 4: 7
+        Vaga 5: 8
+        Vaga 6: 9
+        For simplificado:
+        Vaga 0: 2
+        Vaga 1: 3
+        Vaga 2: 5
+        Vaga 3: 6
+        Vaga 4: 7
+        Vaga 5: 8
+        Vaga 6: 9
+        Se encontrar o valor procurado vai retornar a key, caso contrário vai retornar "-1"
+        num.indexOf(7)  ===== 4
+        num.indexOf(4)  ===== -1
+        O valor 0 não foi encontrado!
+        O valor 1 não foi encontrado!
+        O valor 2 está na posição 0
+        O valor 3 está na posição 1
+        O valor 4 não foi encontrado!
+        O valor 5 está na posição 2
+        O valor 6 está na posição 3
+        O valor 7 está na posição 4
+        O valor 8 está na posição 5
+        O valor 9 está na posição 6
+    </code>
+    </pre>
+</body>
+</html>
